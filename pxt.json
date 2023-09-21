@@ -1,5 +1,6 @@
 {
     "name": "Dæmp de svingninger!",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "core": "*",
