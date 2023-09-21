@@ -91,7 +91,7 @@ input.onButtonPressed(Button.B, function () {
 ## Knap A+B Slet en måling
 Du skal kunne slette målingerne på din @boardname@
 * Træk `||datalogger:delete log||` ind i `||input:når der trykkes på knap A+B||` (sletter målingen) 
-* Træk en `||basic.vis LED'er||` blok ind under `||variables:delete log||` 
+* Træk en `||basic.vis LED'er||` blok ind under `||datalogger:delete log||` 
 * Tegn et symbol for at data er blevet slettet 
 * Træk blokken `||basic.pause||` ind under symbolet du har tegnet
 * Træk blokken `||basic.ryd skærmen||` ind under `||basic.pause||`
