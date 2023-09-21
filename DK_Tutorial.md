@@ -1,9 +1,10 @@
 ## Svingningsmåleren! 
 Nu skal du bygge en måler til at registrere svingninger! 
-
 * **OBS!** Du skal bruge en @boardname@ i mindst version 2 (V2)
-* Følg med her, så er koden klar om lidt! :-) 
-* Du kan eventuelt se videoen [her](http://example.com "testvideoen") for en gennemgang af denne tutorial.
+
+## Ryd skrivebordet :-)
+* `||basic.når programmet starter||` 
+* `||basic.for altid||`
 
 ## Installer datalogger-udvidelsen
 Hvis du ikke allerede har dataloggeren:
@@ -110,9 +111,10 @@ input.onButtonPressed(Button.AB, function () {
 ```
 
 
-## Hver 100 ms
-Datalogningen sker i blokken `||loops:every||`  
-* Start med at trække en `||logic:hvis ... så||` ind i blokken `||loops:every||`
+## Datalogning hver 100 ms
+* Træk blokken `||loops:every||` ind
+* Sæt `||loops:every||` til 100 ms 
+* Træk en `||logic:hvis ... så||` ind i blokken `||loops:every||`
 * Træk `||logic: 0 = 0 ||` ind i blokken `||logic:hvis ... så||` 
 * Træk derefter variablen `||variables:datalogning||` ind i `||logic: 0 = 0 ||` blokken
 * Skift værdien 0 til 1. Nu spørger programmet om `||variables:datalogning||` = 1
@@ -128,7 +130,6 @@ loops.everyInterval(100, function () {
 ## Hver 100 ms: Start datalogning
 Nu til datalogningen, der kører hvis du har trykket på knap A, så variablen `||variables:datalogning||` = 1
 * træk `||datalogger:log data||` ind i `||logic:hvis ... så||`
-* Tryk på + ikonet på `||datalogger:log data||`
 * Udfyld kolonnetitel med navnet "Acceleration" 
 * Udfyld "value" med blokken `||input.acceleration (styrke)||`
 * Tjek at du under `||input.acceleration||` har valgt "styrke" i stedet for "x" 
