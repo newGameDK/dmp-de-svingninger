@@ -51,8 +51,9 @@ input.onButtonPressed(Button.A, function () {
 * Træk en `||logic:hvis ... så||` ind i blokken `||input.når der trykkes på knap B||`
 * Træk `||logic: 0 = 0 ||` ind i blokken `||logic:hvis ... så||` 
 * Træk `||variables:datalogning||` ind i `||logic: 0 = 0 ||`
-* Sæt værdien til 1
+* Sæt værdien i `||logic: datalogning = 0 ||` til 1
 * Træk blokken `||variables:sæt datalogning til||` ind i blokken `||logic:hvis ... så||`
+* Sæt værdien i `||variables:sæt datalogning til||` til 0
 
 
 ```blocks
@@ -86,6 +87,28 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
 })
 ```
+## Knap A+B Slet en måling
+Du skal kunne slette målingerne på din @boardname@
+* Træk `||datalogger:delete log||` ind i `||input:når der trykkes på knap A+B||` (sletter målingen) 
+* Træk en `||basic.vis LED'er||` blok ind under `||variables:delete log||` 
+* Tegn et symbol for at data er blevet slettet 
+* Træk blokken `||basic.pause||` ind under symbolet du har tegnet
+* Træk blokken `||basic.ryd skærmen||` ind under `||basic.pause||`
+```blocks
+input.onButtonPressed(Button.AB, function () {
+    datalogger.deleteLog()
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . # . .
+        . # . # .
+        . . . . .
+        `)
+    basic.pause(1000)
+    basic.clearScreen()
+})
+```
+
 
 ## Hver 100 ms
 Datalogningen sker i blokken `||loops:every||`  
