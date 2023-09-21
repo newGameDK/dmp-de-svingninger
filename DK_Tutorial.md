@@ -48,8 +48,9 @@ input.onButtonPressed(Button.A, function () {
 ```
 
 ## Knap B: Sluk datalogning
-* Træk en `||logic:hvis ... så||` ind i blokken `|input.knap B|`
+* Træk en `||logic:hvis ... så||` ind i blokken `||input.når der trykkes på knap B||`
 * Træk `||logic: 0 = 0 ||` ind i blokken `||logic:hvis ... så||` 
+* Træk `||variables:datalogning||` ind i 
 * Træk blokken `||variables:sæt datalogning til||` ind i blokken `||logic:hvis ... så||`
 * Sæt værdien til 0
 
